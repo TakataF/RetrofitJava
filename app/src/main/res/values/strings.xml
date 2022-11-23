@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Retrofit Java</string>
+    <string name="main_text">Previsao do tempo Utilizando Retrofit</string>
 </resources>
