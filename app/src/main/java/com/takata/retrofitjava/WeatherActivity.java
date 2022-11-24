@@ -2,9 +2,7 @@ package com.takata.retrofitjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.os.Bundle;
 import android.widget.TextView;
 
 import retrofit2.Call;
