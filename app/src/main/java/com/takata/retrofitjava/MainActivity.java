@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,22 +24,24 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn_search = findViewById(R.id.btn_consultar);
         btn_search.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, WeatherActivity.class);
-                String city_name = menu_cidade.getSelectedItem().toString();
+                Long city_id = menu_cidade.getSelectedItemId();
                 String woeid = "";
 
-                if (city_name == "Umuarama") {
+                if (city_id == 0) {
                     woeid = "455918"; //Umuarama
-                } else if (city_name == "Maringá") {
+                } else if (city_id == 1) {
                     woeid = "455883"; //Maringá
-                } else if (city_name == "Londrina"){
+                } else if (city_id == 2){
                     woeid = "455832"; //Londrina
                 }
 
-                intent.putExtra(Intent.EXTRA_TEXT, woeid);
+                intent.putExtra("city_woeid", woeid);
                 startActivity(intent);
+                Log.e("CityIntent", "City WOEID: " + woeid);
 
             }
         });
