@@ -46,11 +46,11 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
-        android:id="@+id/bt_consulta"
+        android:id="@+id/btn_consultar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:text="Consultar Previsão do Tempo"
+        android:text="Pesquisar dados do clima atual"
         app:layout_constraintTop_toBottomOf="@id/spinner_cidade"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
